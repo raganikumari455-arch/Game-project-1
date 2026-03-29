@@ -1,42 +1,39 @@
 # Game-project-1
-This is my first project  in c language
-<br>
-Author--Ragani Kumari
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-int main()
-{
-    // Initialize random number generator
-    srand(time(0));
+# 🎯 Number Guessing Game in C
 
-    // Generate random number between 1 and 100
-    int randomNumber = (rand() % 100) + 1;
-    int no_of_guesses = 0;
-    int guessed_number;
+This is a simple **Number Guessing Game** written in C. The program generates a random number between **1 and 100**, and the player has to guess it with hints provided after each attempt.
 
-    // Print the random number
-    // printf("Random Number: %d\n", randomNumber);
+---
 
-    do
-    {
-        printf("Guess the number");
-        scanf("%d", &guessed_number);
-        if(guessed_number>randomNumber){
-            printf("Lower number please!\n");
-        }
-        else if(guessed_number<randomNumber){
-            printf("Higher number please!\n");
-        }
-        else{
-            printf("Congrats!!\n");
-        }
-        no_of_guesses++;
+## 📌 About the Project
 
-    } while (guessed_number != randomNumber);
+This project is my **first C programming project**, created to practice:
+- Basic input/output
+- Conditional statements
+- Loops
+- Random number generation
 
-    printf("You guessed the number in %d guesses", no_of_guesses);
+**Author:** Ragani Kumari
 
-    return 0;
-}
+---
+
+## 🚀 How It Works
+
+- The program generates a random number between **1 and 100**
+- The user keeps guessing the number
+- After each guess:
+  - If the guess is too high → *"Lower number please!"*
+  - If the guess is too low → *"Higher number please!"*
+  - If correct → *"Congrats!!"*
+- The program also shows how many attempts it took
+
+---
+
+## 🛠️ Technologies Used
+
+- C Programming Language
+- Standard Libraries:
+  - `stdio.h`
+  - `stdlib.h`
+  - `time.h`
